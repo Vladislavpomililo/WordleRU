@@ -36,7 +36,16 @@ public class ButtonMainMenu : MonoBehaviour
 
     public void StartGameCell()
     {
-        SceneManager.LoadScene("GameScene");
+        if (EnergyScript.energy > EnergyScript.minEnergy)
+        {
+            EnergyScript.energy--;
+            EnergyScript.SetEnergy();
+            SceneManager.LoadScene("GameScene");
+        }
+        else
+        {
+            MessageManager.errorMessageCheck = true;
+        }
     }
 
     public void Settings()
@@ -56,6 +65,7 @@ public class ButtonMainMenu : MonoBehaviour
 
     public void BackToMainMenu()
     {
+        EnergyScript.SetEnergy();
         SceneManager.LoadScene("MainMenu");
     }
 

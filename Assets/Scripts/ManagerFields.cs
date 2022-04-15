@@ -8,14 +8,19 @@ public class ManagerFields : MonoBehaviour
     public Transform cellsTransform;
     private int childCountCells;
 
-    static public int listCellsCount = 0;
-    static public bool cell_1 = true; 
+    static public int listCellsCount;
+    static public bool cell_1;
 
-    static public bool cellsController = true;
-    static public bool checkCell = false;
+    static public bool cellsController;
+    static public bool checkCell;
 
     void Start()
     {
+        listCellsCount = 0;
+        cell_1 = true;
+        cellsController = true;
+        checkCell = false;
+
         cells = new List<Transform>();
 
         childCountCells = cellsTransform.childCount;
