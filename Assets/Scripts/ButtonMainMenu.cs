@@ -73,4 +73,10 @@ public class ButtonMainMenu : MonoBehaviour
     {
         backToMainMenu.SetActive(true);
     }
+
+    public void Restart()
+    {
+        EnergyScript.SetEnergy();
+        SceneManager.LoadScene("GameScene");
+    }
 }

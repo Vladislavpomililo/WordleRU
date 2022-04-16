@@ -22,7 +22,7 @@ public class scriptDB : MonoBehaviour
         using (IDbConnection dbcon = (IDbConnection)new SqliteConnection(_sqlDBLocation))
         {
             dbcon.Open(); 
-            var sql = "SELECT COUNT(words) FROM WordsToGame"; 
+            var sql = "SELECT COUNT(words) FROM Words"; 
             using (IDbCommand dbcmd = dbcon.CreateCommand()) 
             { 
                 dbcmd.CommandText = sql;
@@ -31,20 +31,11 @@ public class scriptDB : MonoBehaviour
                 int random = UnityEngine.Random.Range(1, Convert.ToInt32(dbcmd.ExecuteScalar())+1);
                 
 
-                var sqlId = "SELECT words FROM WordsToGame WHERE _id=" + random;
+                var sqlId = "SELECT words FROM Words WHERE _id=" + random;
                 dbcmd.CommandText = sqlId;
                 word = dbcmd.ExecuteScalar().ToString().ToLower();
                 Debug.Log(dbcmd.ExecuteScalar());
                   
-
-                //using (IDataReader reader = dbcmd.ExecuteReader())
-                //{
-                //    while (reader.Read())
-                //    {
-                //        const string frmt = "Words: {0};";
-                //        Debug.Log(string.Format(frmt, reader.GetString(0)));
-                //    }
-                //}
             }
              dbcon.Close(); 
             
@@ -57,7 +48,7 @@ public class scriptDB : MonoBehaviour
         using (IDbConnection dbcon = (IDbConnection)new SqliteConnection(_sqlDBLocation))
         {
             dbcon.Open();
-            var sql = "SELECT words FROM WordsToGame WHERE words = " + "'" + cellToWords.ToString() + "'";
+            var sql = "SELECT words FROM Words WHERE words = " + "'" + cellToWords.ToString() + "'";
             using (IDbCommand dbcmd = dbcon.CreateCommand())
             {
                 dbcmd.CommandText = sql;

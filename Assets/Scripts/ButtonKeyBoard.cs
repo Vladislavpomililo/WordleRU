@@ -63,6 +63,9 @@ public class ButtonKeyBoard : MonoBehaviour
                 if (scriptDB.word == cellToWords)
                 {
                     Debug.Log("Верно");
+                    Win.activWin = true;
+                    
+                    //выводим окно победы
                 }
                 else
                 {

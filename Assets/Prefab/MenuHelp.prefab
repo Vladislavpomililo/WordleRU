@@ -741,7 +741,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0411\u0423\u041A\u0412\u042B '\u0423' \u041D\u0415\u0422 \u0412 \u0417\u0410\u0413\u0410\u0414\u0410\u041D\u041D\u041E\u041C
+  m_Text: "\u0411\u0423\u041A\u0412\u042B '\u041C' \u041D\u0415\u0422 \u0412 \u0417\u0410\u0413\u0410\u0414\u0410\u041D\u041D\u041E\u041C
     \u0421\u041B\u041E\u0412\u0415"
 --- !u!1 &4424029597475603506
 GameObject:
