@@ -31,7 +31,7 @@ public class ButtonKeyBoard : MonoBehaviour
                 ManagerFields.listCellsCount++;
                 ManagerFields.cell_1 = true;
 
-                if (ManagerFields.listCellsCount == 5 || ManagerFields.listCellsCount == 10 || ManagerFields.listCellsCount == 15 || ManagerFields.listCellsCount == 20 || ManagerFields.listCellsCount == 25)
+                if (ManagerFields.listCellsCount == 5 || ManagerFields.listCellsCount == 10 || ManagerFields.listCellsCount == 15 || ManagerFields.listCellsCount == 20 || ManagerFields.listCellsCount == 25 || ManagerFields.listCellsCount == 30)
                 {
                     ManagerFields.cellsController = false;
                 }
@@ -69,6 +69,10 @@ public class ButtonKeyBoard : MonoBehaviour
                 }
                 else
                 {
+                    if(ManagerFields.listCellsCount == 30)
+                    {
+                        GameOver.activGameOver = true;
+                    }
                     ManagerFields.cellsController = true;
                     ManagerFields.cell_1 = false;
                 }

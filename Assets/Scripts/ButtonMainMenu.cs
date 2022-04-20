@@ -76,7 +76,6 @@ public class ButtonMainMenu : MonoBehaviour
 
     public void Restart()
     {
-        EnergyScript.SetEnergy();
-        SceneManager.LoadScene("GameScene");
+        StartGameCell();
     }
 }

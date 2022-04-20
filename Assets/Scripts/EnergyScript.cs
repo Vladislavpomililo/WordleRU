@@ -11,7 +11,7 @@ public class EnergyScript : MonoBehaviour
 
     public static int energy;
 
-    private static float timeEnergyPlus = 180;
+    private static float timeEnergyPlus = 18;
     private static float timeEnergyPr;
 
     [SerializeField] private Text energyText;
