@@ -11,16 +11,19 @@ public class ButtonMainMenu : MonoBehaviour
     [SerializeField] private GameObject helpMenu;
     [SerializeField] private GameObject startMenu;
     [SerializeField] private GameObject startGame;
+    [SerializeField] private GameObject exitGame;
 
     public void OpenMenuStart()
     {
         startMenu.SetActive(true);
         startGame.SetActive(false);
+        exitGame.SetActive(false);
     }
 
     public void ExitMenuStart()
     {
         startGame.SetActive(true);
+        exitGame.SetActive(true);
         startMenu.SetActive(false);
     }
 
@@ -77,5 +80,10 @@ public class ButtonMainMenu : MonoBehaviour
     public void Restart()
     {
         StartGameCell();
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
     }
 }
